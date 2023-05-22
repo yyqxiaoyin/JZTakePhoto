@@ -1,7 +1,7 @@
 package com.vocolinc.takephoto
 
-class User {
-    fun userName():String{
+object TestLib {
+    fun getLibName():String{
         return "yyqxiaoyin"
     }
 }
