@@ -1,14 +1,17 @@
 package com.vocolinc.takephoto.permission;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.vocolinc.takephoto.R;
 import com.vocolinc.takephoto.app.TakePhoto;
@@ -24,7 +27,7 @@ import java.util.ArrayList;
  */
 public class PermissionManager {
     public enum TPermission {
-        STORAGE(Manifest.permission.WRITE_EXTERNAL_STORAGE), CAMERA(Manifest.permission.CAMERA);
+        STORAGE(Manifest.permission.WRITE_EXTERNAL_STORAGE), CAMERA(Manifest.permission.CAMERA),IMAGES(Manifest.permission.READ_MEDIA_IMAGES);
         String stringValue;
 
         TPermission(String stringValue) {
@@ -75,13 +78,19 @@ public class PermissionManager {
             return TPermissionType.NOT_NEED;
         }
 
-        boolean cameraGranted = true, storageGranted =
-            ContextCompat.checkSelfPermission(contextWrap.getActivity(), TPermission.STORAGE.stringValue())
-                == PackageManager.PERMISSION_GRANTED ? true : false;
+        boolean cameraGranted = true;
+        boolean storageGranted = false;
+        if (Build.VERSION.SDK_INT >= 33) {
+            storageGranted = ContextCompat.checkSelfPermission(contextWrap.getActivity(),TPermission.IMAGES.stringValue) == PackageManager.PERMISSION_GRANTED;
+
+        }else {
+            storageGranted = ContextCompat.checkSelfPermission(contextWrap.getActivity(), TPermission.STORAGE.stringValue())
+                    == PackageManager.PERMISSION_GRANTED;
+        }
 
         if (TextUtils.equals(methodName, "onPickFromCapture") || TextUtils.equals(methodName, "onPickFromCaptureWithCrop")) {
             cameraGranted = ContextCompat.checkSelfPermission(contextWrap.getActivity(), TPermission.CAMERA.stringValue())
-                == PackageManager.PERMISSION_GRANTED ? true : false;
+                    == PackageManager.PERMISSION_GRANTED;
         }
 
         boolean granted = storageGranted && cameraGranted;
@@ -98,9 +107,11 @@ public class PermissionManager {
         return granted ? TPermissionType.GRANTED : TPermissionType.WAIT;
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
     public static void requestPermission(@NonNull TContextWrap contextWrap, @NonNull String[] permissions) {
         if (contextWrap.getFragment() != null) {
-            contextWrap.getFragment().requestPermissions(permissions, TConstant.PERMISSION_REQUEST_TAKE_PHOTO);
+            contextWrap.getFragment().requestPermissions(permissions,TConstant.PERMISSION_REQUEST_TAKE_PHOTO);
+
         } else {
             ActivityCompat.requestPermissions(contextWrap.getActivity(), permissions, TConstant.PERMISSION_REQUEST_TAKE_PHOTO);
         }
