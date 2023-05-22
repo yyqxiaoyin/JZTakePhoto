@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Multiple Image Select</string>
+    <string name="app_name">VOCOlinc</string>
 
     <string name="album_view">Выберите фотоальбом</string>
     <string name="image_view">Кликните на изображение для выбора</string>
@@ -9,6 +9,20 @@
     <string name="selected">Выбрано</string>
     <string name="limit_exceeded">Можно выбрать максимум %d изображений</string>
 
+    <string name="grant_permission">Предоставить разрешение</string>
+    <string name="error_null_cursor">Упс! Что-то пошло не так!</string>
+    <string name="tip_type_not_image">Выбирайте не картинки</string>
+    <string name="tip_no_camera">Не снимать</string>
+    <string name="tip_tips">Советы</string>
+    <string name="tip_compress">Будучи сжатым...</string>
+    <string name="tip_compress_failed">%1$s Ошибка сжатия изображения:%2$s picturePath:%3$s</string>
+    <string name="msg_crop_failed">Es gibt Bilder von Missernten.</string>
+    <string name="msg_compress_failed">Есть фотографии неудач компрессии.</string>
+    <string name="msg_crop_canceled">отмененный урожай</string>
+    <string name="msg_operation_canceled">Операция отменена.</string>
+    <string name="tip_permission_camera">Нет разрешения на использование камеры, откройте управление правами</string>
+    <string name="tip_permission_storage">Нет разрешения на использование SD-карты, откройте управление правами</string>
+    <string name="tip_permission_camera_storage">Нет разрешения на использование камеры и SD-карты, откройте управление правами</string>
     <string name="permission_denied">Отсутствует разрешение!</string>
     <string name="permission_denied_albums">Разрешите доступ к фотографиям, медиа и файлам на своём устройстве для просмотра альбомов</string>
     <string name="permission_denied_images">Разрешите доступ к фотографиям, медиа и файлам на своём устройстве для просмотра изображений</string>

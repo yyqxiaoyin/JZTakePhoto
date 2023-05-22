@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Multiple Image Select</string>
+    <string name="app_name">VOCOlinc</string>
 
     <string name="album_view">Select photo album</string>
     <string name="image_view">Tap to select images</string>
@@ -26,6 +26,7 @@
     <string name="tip_permission_camera">没有使用相机的权限，请在权限管理中开启</string>
     <string name="tip_permission_storage">没有使用SD卡的权限，请在权限管理中开启</string>
     <string name="tip_permission_camera_storage">没有使用相机和SD卡的权限，请在权限管理中开启</string>
+    <string name="permission_denied">没有权限</string>
 
 
 </resources>

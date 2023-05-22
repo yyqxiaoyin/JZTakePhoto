@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Multiple Image Select</string>
+    <string name="app_name">VOCOlinc</string>
 
     <string name="album_view">Sélectionnez un album photo</string>
     <string name="image_view">Appuyez pour sélectionner des images</string>
@@ -9,6 +9,20 @@
     <string name="selected">sélectionné</string>
     <string name="limit_exceeded">Impossible de sélectionner plus que %d images</string>
 
+    <string name="grant_permission">Donner la permission</string>
+    <string name="error_null_cursor">Oups, quelque chose s\'est mal passé !</string>
+    <string name="tip_type_not_image">Ne choisissez pas les images</string>
+    <string name="tip_no_camera">Pas d\'appareil photo</string>
+    <string name="tip_tips">Conseils</string>
+    <string name="tip_compress">Être compressé...</string>
+    <string name="tip_compress_failed">Échec de la compression de l\'image %1$s :%2$s chemin de l\'image :%3$s</string>
+    <string name="msg_crop_failed">Il y a des images de mauvaises récoltes.</string>
+    <string name="msg_compress_failed">Il y a des photos d\'échecs de compression.</string>
+    <string name="msg_crop_canceled">récolte annulée</string>
+    <string name="msg_operation_canceled">Opération annulée.</string>
+    <string name="tip_permission_camera">Pas d\'autorisation d\'utiliser la caméra, ouvrez la gestion des droits</string>
+    <string name="tip_permission_storage">Pas d\'autorisation d\'utiliser la caméra, ouvrez la gestion des droits...</string>
+    <string name="tip_permission_camera_storage">Aucune autorisation d\'utiliser la caméra et la carte SD, ouvrez la gestion des droits</string>
     <string name="permission_denied">Permission refusée!</string>
     <string name="permission_denied_albums">Veuillez permettre l\'accès aux photos, médias et fichiers sur votre appareil pour afficher les albums</string>
     <string name="permission_denied_images">Veuillez permettre l\'accès aux photos, médias et fichiers sur votre appareil pour afficher les images</string>

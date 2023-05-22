@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">VOCOlinc</string>
+
+    <string name="album_view">フォトアルバムを選択</string>
+    <string name="image_view">タップして画像を選択します</string>
+
+    <string name="add">追加</string>
+    <string name="selected">選択された</string>
+    <string name="limit_exceeded">最大 %d 個の画像を選択できます</string>
+
+    <string name="permission_denied_albums">アルバムを表示するためにデバイス上の写真、メディア、ファイルへのアクセスを許可します</string>
+    <string name="permission_denied_images">画像を表示するには、デバイス上の写真、メディア、ファイルへのアクセスを許可します</string>
+    <string name="grant_permission">許可を与える</string>
+
+    <string name="error_null_cursor">おっと！何かが間違っていた！</string>
+
+    <string name="tip_type_not_image">画像が選択されていません</string>
+    <string name="tip_no_camera">カメラがない</string>
+    <string name="tip_tips">ヒント</string>
+    <string name="tip_compress">写真を圧縮しています...</string>
+    <string name="tip_compress_failed">"%1$s 画像圧縮に失敗しました: %2$s ピクチャパス: %3$s"</string>
+    <string name="msg_crop_failed">"トリミングに失敗した画像"</string>
+    <string name="msg_compress_failed">"圧縮に失敗した写真があります"</string>
+    <string name="msg_crop_canceled">" クロップをキャンセル"</string>
+    <string name="msg_operation_canceled">"作戦は中止されました"</string>
+    <string name="tip_permission_camera">カメラを使用する権限がありません。権限管理で開いてください。</string>
+    <string name="tip_permission_storage">SD カードを使用する権限がありません。権限管理で開いてください。</string>
+    <string name="tip_permission_camera_storage">カメラとSDカードを使用する権限がありません。権限管理で開いてください。</string>
+    <string name="permission_denied">アクセス拒否</string>
+
+
+</resources>
